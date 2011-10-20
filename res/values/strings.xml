@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, WeatherForcastGlobalizationActivity!</string>
+    <string name="app_name">Weather Forcast Globalization</string>
+    <string name="ok">OK</string>
+    <string-array name="place">
+        <item >Beijing</item>
+        <item >Shanghai</item>
+        <item >Hong Kong</item>
+    </string-array>
+        <string name="weather_info">There will be weather info output.</string>
+
+</resources>
