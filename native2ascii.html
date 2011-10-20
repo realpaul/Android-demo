@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta name="keywords" content="native2ascii,ascii" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Native2ascii</title>
+    <style type="text/css">
+        #asciiString, #nativeString
+        {
+            height: 450px;
+            width: 520px;
+        }
+        input
+        {
+            padding: 3px;
+            margin: 3px;
+            border-style: solid;
+            border-width: 1px;
+        }
+        textarea
+        {
+            border-style: solid;
+            border-width: 2px;
+            padding: 3px;
+            font-family: Arial, Verdana, Tahoma, 微软雅黑;
+        }
+        body
+        {
+            font-family: Arial, Verdana, Tahoma, 微软雅黑;
+        }
+    </style>
+</head>
+<body>
+    <script language="javascript" type="text/javascript">
+        function native2ascii() {
+            var character = document.getElementById("nativeString").value.split("");
+            var ascii = "";
+            for (var i = 0; i < character.length; i++) {
+                var code = Number(character[i].charCodeAt(0));
+                if (!document.getElementById("ignoreLetter").checked || code > 127) {
+                    var charAscii = code.toString(16);
+                    charAscii = new String("0000").substring(charAscii.length, 4) + charAscii;
+                    ascii += "\\u" + charAscii;
+                } else {
+                    ascii += character[i];
+                }
+            }
+            document.getElementById("asciiString").value = ascii;
+        }
+        function ascii2native() {
+            var character = document.getElementById("asciiString").value.split("\\u");
+            var native1 = character[0];
+            for (var i = 1; i < character.length; i++) {
+                var code = character[i];
+                native1 += String.fromCharCode(parseInt("0x" + code.substring(0, 4)));
+                if (code.length > 4) {
+                    native1 += code.substring(4, code.length);
+                }
+            }
+            document.getElementById("nativeString").value = native1;
+        }
+    </script>
+    <p>
+    </p>
+    <form name="characterCode" action="">
+    <h1 align="center"><i>Native2ascii Transformation</i></h1>
+    <br />
+    <center>
+        <div style="text-align: left; width: 80%;">
+            <input type="checkbox" name="ignoreLetter" id="ignoreLetter" checked="checked" />Don't transform letters and numbers</div>
+    </center>
+    <table align="center" width="80%" cellspacing="0" cellpadding="5">
+        <tr>
+            <td>
+                Ascii:
+            </td>
+            <td width="10">
+            </td>
+            <td>
+                Native:
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <textarea id="asciiString" name="asciiString" rows="" cols=""></textarea>
+            </td>
+            <td width="10">
+                <input type="button" value=">>" onclick="ascii2native();" class="submit" /><br />
+                <input type="button" value="<<" onclick="native2ascii();" class="submit" />
+            </td>
+            <td>
+                <textarea id="nativeString" name="nativeString" rows="" cols=""></textarea>
+            </td>
+        </tr>
+    </table>
+    </form>
+    <div style="border: 0; text-align: center">
+        &copy; 2011 Peng Fei Lv<br />
+    </div>
+</body>
+</html>
