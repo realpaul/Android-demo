@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, WeatherForcastGlobalizationActivity!</string>
+    <string name="app_name">天气预测全球化</string>
+    <string name="ok">确定</string>
+
+    <string-array name="place">
+        <item>北京</item>
+        <item>上海</item>
+        <item>香港</item>
+    </string-array>
+
+    <string name="weather_info">天气信息输出</string>
+    <string name="abc"></string>
+
+    <string-array name="current_weather">
+        <item>%s 现在的天气情况是:</item>
+        <item> - 天气条件: %s</item>
+        <item> - 温度: %s ℃</item>
+        <item> - 湿度: %s</item>
+        <item> - 刮风条件: %s</item>
+    </string-array>
+
+    <string name="location">You location:</string>
+
+</resources>

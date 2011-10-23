@@ -13,12 +13,12 @@
             android:id="@+id/tableRow1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
+
             <TextView
                 android:id="@+id/textView1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Your Location:" />
+                android:text="@string/location" />
 
         </TableRow>
 

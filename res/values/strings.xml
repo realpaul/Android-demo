@@ -4,11 +4,24 @@
     <string name="hello">Hello World, WeatherForcastGlobalizationActivity!</string>
     <string name="app_name">Weather Forcast Globalization</string>
     <string name="ok">OK</string>
+
     <string-array name="place">
-        <item >Beijing</item>
-        <item >Shanghai</item>
-        <item >Hong Kong</item>
+        <item>Beijing</item>
+        <item>Shanghai</item>
+        <item>Hong Kong</item>
     </string-array>
-        <string name="weather_info">There will be weather info output.</string>
+
+    <string name="weather_info">There will be weather info output.</string>
+    <string name="abc"></string>
+
+    <string-array name="current_weather">
+        <item>%s current weather:</item>
+        <item> - Weather Condition: %s</item>
+        <item> - Temperature: %s ℃</item>
+        <item> - Humidity: %s</item>
+        <item> - Wind Condition: %s</item>
+    </string-array>
+
+    <string name="location">You location:</string>
 
 </resources>
