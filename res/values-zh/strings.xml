@@ -11,6 +11,15 @@
         <item>香港</item>
     </string-array>
 
+    <!-- Do not translate -->
+    <string-array name="place_in_English">
+        <item>Beijing</item>
+        <item>Shanghai</item>
+        <item>Hongkong</item>
+    </string-array>
+    <!-- End of untranslation part -->
+
+        
     <string name="weather_info">天气信息输出</string>
     <string name="abc"></string>
 
@@ -22,6 +31,6 @@
         <item> - 刮风条件: %s</item>
     </string-array>
 
-    <string name="location">You location:</string>
+    <string name="location">请选择所在位置：</string>
 
 </resources>

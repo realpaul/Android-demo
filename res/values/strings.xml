@@ -11,8 +11,17 @@
         <item>Hong Kong</item>
     </string-array>
 
+    <!-- Do not translate -->
+    <string-array name="place_in_English">
+        <item>Beijing</item>
+        <item>Shanghai</item>
+        <item>Hongkong</item>
+    </string-array>
+    <!-- End of untranslation part -->
+        
     <string name="weather_info">There will be weather info output.</string>
     <string name="abc"></string>
+
 
     <string-array name="current_weather">
         <item>%s current weather:</item>
@@ -22,6 +31,6 @@
         <item> - Wind Condition: %s</item>
     </string-array>
 
-    <string name="location">You location:</string>
+    <string name="location">Please select your location:</string>
 
 </resources>

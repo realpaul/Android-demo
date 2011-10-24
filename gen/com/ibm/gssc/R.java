@@ -9,7 +9,14 @@ package com.ibm.gssc;
 
 public final class R {
     public static final class array {
+        /**  End of untranslation part 
+         */
+        public static final int current_weather=0x7f050002;
         public static final int place=0x7f050000;
+        /**  Do not translate 
+ Do not translate 
+         */
+        public static final int place_in_English=0x7f050001;
     }
     public static final class attr {
     }
@@ -19,7 +26,8 @@ public final class R {
     public static final class id {
         public static final int idPlace=0x7f060004;
         public static final int idSubmitPlace=0x7f060006;
-        public static final int idWeatherInfo=0x7f060008;
+        public static final int idWeatherIcon=0x7f060008;
+        public static final int idWeatherInfo=0x7f06000a;
         public static final int tableLayout1=0x7f060000;
         public static final int tableRow1=0x7f060001;
         public static final int tableRow2=0x7f060003;
@@ -32,8 +40,10 @@ public final class R {
         public static final int main=0x7f030000;
     }
     public static final class string {
+        public static final int abc=0x7f040004;
         public static final int app_name=0x7f040001;
         public static final int hello=0x7f040000;
+        public static final int location=0x7f040005;
         public static final int ok=0x7f040002;
         public static final int weather_info=0x7f040003;
     }
