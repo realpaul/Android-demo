@@ -2,6 +2,8 @@ package com.ibm.gssc;
 
 import java.io.*;
 import java.net.*;
+import java.util.Locale;
+
 import javax.xml.parsers.*;
 import org.xml.sax.*;
 
@@ -48,12 +50,15 @@ public class WeatherForcastGlobalizationActivity extends Activity implements
 
 			XMLHandler handler = new XMLHandler();
 			reader.setContentHandler(handler);
+			
+			String currentLocale = Locale.getDefault().toString();
+			Log.v(LOG_TAG, currentLocale);
 
-			URL url = new URL("http://www.google.com/ig/api?hl=zh-cn&weather=" + cityInEnglish);
+			URL url = new URL("http://www.google.com/ig/api?hl=" + currentLocale + "&oe=UTF-8&weather=" + cityInEnglish);
 			Log.v(LOG_TAG, url.toString());
 			InputStream is = url.openStream();
 			//InputStreamReader isr = new InputStreamReader(is);
-			InputStreamReader isr = new InputStreamReader(is, "GBK");
+			InputStreamReader isr = new InputStreamReader(is, "UTF-8");
 			InputSource source = new InputSource(isr);
 
 			reader.parse(source);

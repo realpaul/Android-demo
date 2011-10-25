@@ -9,8 +9,6 @@ package com.ibm.gssc;
 
 public final class R {
     public static final class array {
-        /**  End of untranslation part 
-         */
         public static final int current_weather=0x7f050002;
         public static final int place=0x7f050000;
         /**  Do not translate 
@@ -45,6 +43,9 @@ public final class R {
         public static final int hello=0x7f040000;
         public static final int location=0x7f040005;
         public static final int ok=0x7f040002;
+        /**  End of untranslation part 
+ End of untranslation part 
+         */
         public static final int weather_info=0x7f040003;
     }
 }
