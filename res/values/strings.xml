@@ -33,4 +33,6 @@
 
     <string name="location">Please select your location:</string>
 
+    <string name="detect_location">Detect your location</string>
+
 </resources>
