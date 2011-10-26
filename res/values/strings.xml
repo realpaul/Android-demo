@@ -2,7 +2,7 @@
 <resources>
 
     <string name="hello">Hello World, WeatherForcastGlobalizationActivity!</string>
-    <string name="app_name">Weather Forcast Globalization</string>
+    <string name="app_name">Weather Demo Globalization</string>
     <string name="ok">OK</string>
 
     <string-array name="place">
@@ -34,5 +34,7 @@
     <string name="location">Please select your location:</string>
 
     <string name="detect_location">Detect your location</string>
+
+    <string name="goback">Return</string>
 
 </resources>

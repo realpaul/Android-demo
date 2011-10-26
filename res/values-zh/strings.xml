@@ -2,7 +2,7 @@
 <resources>
 
     <string name="hello">Hello World, WeatherForcastGlobalizationActivity!</string>
-    <string name="app_name">天气预测全球化</string>
+    <string name="app_name">天气信息全球化演示</string>
     <string name="ok">确定</string>
 
     <string-array name="place">
@@ -32,5 +32,7 @@
     </string-array>
 
     <string name="location">请选择所在位置：</string>
+    <string name="detect_location">检测所在位置</string>
+    <string name="goback">返回</string>
 
 </resources>
