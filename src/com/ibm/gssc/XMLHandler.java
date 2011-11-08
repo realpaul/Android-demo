@@ -3,6 +3,8 @@ package com.ibm.gssc;
 import org.xml.sax.helpers.*;
 import org.xml.sax.*;
 
+import android.util.Log;
+
 public class XMLHandler extends DefaultHandler {
     private static final String TAG = "XMLHandler";
     private WeatherBean currentWeather;
@@ -26,7 +28,7 @@ public class XMLHandler extends DefaultHandler {
         String tagName = localName.length() != 0 ? localName : qName;
         tagName = tagName.toLowerCase();
        
-        //Log.d(TAG,"tagName = "+tagName);
+        Log.d(TAG,"tagName = "+tagName);
         if(tagName.equals("current_conditions")){
         	currentFlag = true;
         	currentWeather = new WeatherBean();        	
