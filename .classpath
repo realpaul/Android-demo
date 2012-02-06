@@ -4,5 +4,6 @@
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="lib" path="lib/icu4j-4_8_1_1.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

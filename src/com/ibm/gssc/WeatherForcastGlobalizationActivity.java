@@ -31,6 +31,8 @@ public class WeatherForcastGlobalizationActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
+		
+		com.ibm.icu.text.Bidi bidi = new com.ibm.icu.text.Bidi();
 
 		Button idSubmitPlace = (Button) findViewById(R.id.idSubmitPlace);
 		idSubmitPlace.setOnClickListener(new View.OnClickListener() {
@@ -50,7 +52,7 @@ public class WeatherForcastGlobalizationActivity extends Activity {
 					XMLHandler handler = new XMLHandler();
 					reader.setContentHandler(handler);
 
-					String currentLocale = Locale.getDefault().toString();
+					String currentLocale = Locale.getDefault().getCountry().toString();
 					Log.v(LOG_TAG, currentLocale);
 
 					URL url = new URL("http://www.google.com/ig/api?hl=" + currentLocale
@@ -58,7 +60,8 @@ public class WeatherForcastGlobalizationActivity extends Activity {
 					Log.v(LOG_TAG, url.toString());
 					InputStream is = url.openStream();
 					// InputStreamReader isr = new InputStreamReader(is);
-					InputStreamReader isr = new InputStreamReader(is, "UTF-8");
+					//InputStreamReader isr = new InputStreamReader(is, "UTF-8");
+					InputStreamReader isr = new InputStreamReader(is);
 					InputSource source = new InputSource(isr);
 
 					reader.parse(source);
@@ -70,6 +73,12 @@ public class WeatherForcastGlobalizationActivity extends Activity {
 							+ String.format(current_weather[2], beanCurrentWeather.getTemperature()) + "\n"
 							+ String.format(current_weather[3], beanCurrentWeather.getHumidity()) + "\n"
 							+ String.format(current_weather[4], beanCurrentWeather.getWind_condition());
+					
+					com.ibm.icu.text.NumberFormat nf =com.ibm.icu.text.NumberFormat.getNumberInstance(Locale.getDefault());
+					String output = nf.format(12345);
+					Log.v(LOG_TAG, "aaaaa" + output);
+					weather_output = "\n" + weather_output + output; 
+					
 					idWeatherInfo.setText(weather_output);
 					idWeatherIcon.setImageBitmap(getHttpBitmap(("http://www.google.com")
 							+ beanCurrentWeather.getIcon()));

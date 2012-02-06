@@ -83,6 +83,11 @@
         android:alwaysDrawnWithCache="false"
         android:gravity="bottom|right" >
 
+        <android.widget.CalendarView
+            android:id="@+id/calendarView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
         <Button
             android:id="@+id/idShowGPSPage"
             android:layout_width="wrap_content"
